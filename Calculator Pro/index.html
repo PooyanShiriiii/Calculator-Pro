@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f0f0f">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <!-- 🧠 History -->
+        <div class="history-wrapper">
+            <div class="history-title">🧠 History</div>
+
+            <button type="button" onclick="clearHistory()" class="clear-history">
+                🗑 Clear All
+            </button>
+
+            <div id="history" class="history"></div>
+        </div>
+
+        <!-- 📟 Display -->
+        <div class="top">
+            <input id="display" disabled>
+        </div>
+
+        <!-- 🌈 Theme Menu -->
+        <div id="menu" class="menu hidden">
+            <button type="button" onclick="setTheme('dark')">🌙 Dark</button>
+            <button type="button" onclick="setTheme('light')">☀️ Light</button>
+            <button type="button" onclick="setTheme('ocean')">🌊 Ocean</button>
+            <button type="button" onclick="setTheme('fire')">🔥 Fire</button>
+            <button type="button" onclick="setTheme('neon')">💜 Neon</button>
+        </div>
+
+        <!-- 🔢 Buttons -->
+        <div class="buttons">
+
+            <button data-key="7" onclick="append('7')">7</button>
+            <button data-key="8" onclick="append('8')">8</button>
+            <button data-key="9" onclick="append('9')">9</button>
+            <button data-key="/" onclick="append('/')">÷</button>
+
+            <button data-key="4" onclick="append('4')">4</button>
+            <button data-key="5" onclick="append('5')">5</button>
+            <button data-key="6" onclick="append('6')">6</button>
+            <button data-key="*" onclick="append('*')">×</button>
+
+            <button data-key="1" onclick="append('1')">1</button>
+            <button data-key="2" onclick="append('2')">2</button>
+            <button data-key="3" onclick="append('3')">3</button>
+            <button data-key="-" onclick="append('-')">-</button>
+
+            <button data-key="0" onclick="append('0')">0</button>
+            <button data-key="." onclick="append('.')">.</button>
+            <button data-key="=" onclick="calculate()">=</button>
+            <button data-key="+" onclick="append('+')">+</button>
+
+            <button onclick="clearAll()" class="clear">C</button>
+            <button data-key="DEL" onclick="del()">⌫</button>
+
+            <button onclick="toggleMenu()" class="theme-btn">🎨</button>
+
+        </div>
+
+    </div>
+
+    <!-- ⚡ script باید آخر باشه -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
